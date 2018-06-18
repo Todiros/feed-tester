@@ -101,8 +101,27 @@ $(function() {
     describe('New Feed Selection', () => {
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
-         * Remember, loadFeed() is asynchronous.
          */
 
+        let currentFeed, newFeed;
+
+        beforeEach((done) => {
+            loadFeed(0, () => {
+                currentFeed = document.querySelector('.feed').innerHTML;
+                done();
+            });
+        });
+
+        beforeEach((done) => {
+            loadFeed(1, () => {
+                newFeed = document.querySelector('.feed').innerHTML;
+                done();
+            });
+        });
+
+        it('content changes when new feed is loaded', (done) => {
+            expect(currentFeed).not.toBe(newFeed);
+            done();
+        });
     });
 }());
