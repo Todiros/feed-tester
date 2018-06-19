@@ -52,6 +52,3 @@ It uses [Jasmine Framework](https://jasmine.github.io/) for the JavaScript testi
 * Resources: 
     * Testing Framework: [**Jasmine**](https://jasmine.github.io/)
     * Coffee: [**Tchibo**](https://www.tchibo-coffee.co.uk/)
-
-
-
